@@ -49,7 +49,7 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        return response()->json($post->get(), 201);
+        return response()->json($post->find($post->id), 201);
     }
 
     /**
